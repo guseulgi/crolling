@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TYSOFT Search Project</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+  </head>
+  <body>
+    <div>
+      <h2>이름으로 검색하여 참여한 프로젝트 확인하기</h2>
+      <p>주의사항: 이름은 한글로 성까지 입력해주세요.</p>
+      <form action="/nametoproj" method="post" id="nametoproj">
+        <label>이름: </label>
+        <input required name="name" placeholder="이름 입력" />
+        <button type="submit" form="nametoproj">검색</button>
+      </form>
+    </div>
+    <hr />
+
+    <div>
+      <h3>{{ name }} 프로젝트 리스트</h3>
+      {% if name != None %}
+      <ul></ul>
+      {% else %}
+      <ul>
+        <li>검색 결과 없음</li>
+      </ul>
+      {% endif %}
+    </div>
+  </body>
+</html>

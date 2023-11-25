@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TYSOFT Redmine auto crolling</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='/style.css') }}"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- TOP -->
+      <h2>태영소프트 sRND 업무 자동화 프로그램</h2>
+      <label>Redmine: </label>
+      <a href="https://biz.tysoft.co.kr:10011/redmine/"
+        >https://biz.tysoft.co.kr:10011/redmine/</a
+      ><br /><br />
+      <!-- <label>ID</label>
+      <input placeholder="ID 입력" value="honghyeon" disabled />
+      <label>PW</label>
+      <input placeholder="PW 입력" value="ghdgus007!" disabled /> -->
+      <hr />
+      <ul style="list-style: decimal; text-decoration: none; margin: 30px">
+        <h3>📌 INDEX</h3>
+        <li>
+          <a href="/nametoproj">이름으로 검색하여 참여한 프로젝트 확인하기</a>
+        </li>
+        <li>
+          <a href="/retrieveadm">담당자, 수정자 조회</a>
+        </li>
+      </ul>
+
+      <!-- BOT -->
+      <hr />
+      <div style="position: absolute; bottom: 0">
+        <p>제작자: 구슬기</p>
+        <p>
+          프로그램 설정 관련 문의는 자유롭게 연락주세요. (Flask, Selenium 사용)
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
