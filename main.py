@@ -28,8 +28,9 @@ def nametoproj():
         name = str(request.form.get('name', ''))
 
         # 셀레니움 실행 함수
-        src.functions.nametoproj(name)
-        return render_template('nametoproj.html', name=name)
+        result = src.functions.nametoproj(name)
+        print(result[name], '###########')
+        return render_template('nametoproj.html', name=name, list=result[name])
 
 
 @app.route('/retrieveadm')

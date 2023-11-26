@@ -12,7 +12,16 @@
   <body>
     <div>
       <h2>이름으로 검색하여 참여한 프로젝트 확인하기</h2>
-      <p>주의사항: 이름은 한글로 성까지 입력해주세요.</p>
+      <p>주의사항1: 이름은 한글로 성까지 입력해주세요.</p>
+      <p>
+        주의사항2: 자동화 프로그램이 돌아가는 동안 백그라운드로 작동하게 됩니다.
+        많은 시간이 걸리므로 다른 작업하시다가 결과를 확인해주세요.
+      </p>
+      <p>
+        주의사항3: 자동화 프로그램이 돌아가는동안 자동화가 돌아가는 브라우저와
+        검색 버튼을 누른 브라우저를 건드리면 오류가 발생합니다. 작업 중엔
+        건드리지 말아주세요.
+      </p>
       <form action="/nametoproj" method="post" id="nametoproj">
         <label>이름: </label>
         <input required name="name" placeholder="이름 입력" />
@@ -22,9 +31,13 @@
     <hr />
 
     <div>
-      <h3>{{ name }} 프로젝트 리스트</h3>
+      <h3>{{ name }}님의 프로젝트 리스트</h3>
       {% if name != None %}
-      <ul></ul>
+      <ul style="list-style: decimal">
+        {% for item in list %}
+        <li>{{item}}</li>
+        {% endfor %}
+      </ul>
       {% else %}
       <ul>
         <li>검색 결과 없음</li>
