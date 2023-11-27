@@ -52,7 +52,7 @@ def nametoproj(searchInput):
         By.CSS_SELECTOR, "#content > div.autoscroll > table > tbody > tr > td.name > a")
 
     for group in groups:
-        print('그룹: ', group.text)
+        # print('그룹: ', group.text)
         group.click()
         time.sleep(.1)
 

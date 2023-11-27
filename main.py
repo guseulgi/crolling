@@ -29,7 +29,6 @@ def nametoproj():
 
         # 셀레니움 실행 함수
         result = src.functions.nametoproj(name)
-        print(result[name], '###########')
         return render_template('nametoproj.html', name=name, list=result[name])
 
 
